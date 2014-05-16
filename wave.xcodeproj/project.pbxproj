@@ -1,1127 +1,600 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>3FB1B3CAA62B4583931A4F47</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-waveTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>7A78B2BAD3B74DBFBD65AF9F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F74449C348BC4E11B1A2968B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DF8A026449E049E8B3EDB215</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-waveTests.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods-waveTests.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EFB25CFD7E474E6AB1C9AB22</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F74449C348BC4E11B1A2968B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-waveTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>FEE321C01926108200A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321D21926108300A66F92</string>
-				<string>FEE321EB1926108300A66F92</string>
-				<string>FEE321CB1926108300A66F92</string>
-				<string>FEE321CA1926108300A66F92</string>
-				<string>DF8A026449E049E8B3EDB215</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321C11926108200A66F92</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>WVE</string>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>wave</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>FEE321E31926108300A66F92</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>FEE321C81926108300A66F92</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>FEE321C41926108200A66F92</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>FEE321C01926108200A66F92</string>
-			<key>productRefGroup</key>
-			<string>FEE321CA1926108300A66F92</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>FEE321C81926108300A66F92</string>
-				<string>FEE321E31926108300A66F92</string>
-			</array>
-		</dict>
-		<key>FEE321C41926108200A66F92</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>FEE321EE1926108300A66F92</string>
-				<string>FEE321EF1926108300A66F92</string>
-				<string>FEE321F01926108300A66F92</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>FEE321C51926108300A66F92</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FEE321D61926108300A66F92</string>
-				<string>FEE321DB1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FEE321C61926108300A66F92</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FEE321CF1926108300A66F92</string>
-				<string>FEE321D11926108300A66F92</string>
-				<string>FEE321CD1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FEE321C71926108300A66F92</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FEE321DF1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FEE321C81926108300A66F92</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>FEE321F11926108300A66F92</string>
-			<key>buildPhases</key>
-			<array>
-				<string>FEE321C51926108300A66F92</string>
-				<string>FEE321C61926108300A66F92</string>
-				<string>FEE321C71926108300A66F92</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>wave</string>
-			<key>productName</key>
-			<string>wave</string>
-			<key>productReference</key>
-			<string>FEE321C91926108300A66F92</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>FEE321C91926108300A66F92</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>wave.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>FEE321CA1926108300A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321C91926108300A66F92</string>
-				<string>FEE321E41926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321CB1926108300A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321CC1926108300A66F92</string>
-				<string>FEE321CE1926108300A66F92</string>
-				<string>FEE321D01926108300A66F92</string>
-				<string>FEE321E51926108300A66F92</string>
-				<string>F74449C348BC4E11B1A2968B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321CC1926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>FEE321CD1926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321CC1926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321CE1926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>FEE321CF1926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321CE1926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321D01926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>FEE321D11926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321D01926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321D21926108300A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321DC1926108300A66F92</string>
-				<string>FEE321D31926108300A66F92</string>
-				<string>FEE321D81926108300A66F92</string>
-				<string>FEE321DD1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>wave</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321D31926108300A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321D41926108300A66F92</string>
-				<string>FEE321D51926108300A66F92</string>
-				<string>FEE321D71926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Ancillary Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321D41926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>wave-Info.plist</string>
-			<key>path</key>
-			<string>Ancillary Files/wave-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321D51926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>main.m</string>
-			<key>path</key>
-			<string>Ancillary Files/main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321D61926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321D51926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321D71926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>wave-Prefix.pch</string>
-			<key>path</key>
-			<string>Ancillary Files/wave-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321D81926108300A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321D91926108300A66F92</string>
-				<string>FEE321DA1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321D91926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>WVEAppDelegate.h</string>
-			<key>path</key>
-			<string>Classes/WVEAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321DA1926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>WVEAppDelegate.m</string>
-			<key>path</key>
-			<string>Classes/WVEAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321DB1926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321DA1926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321DC1926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321DD1926108300A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321DE1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321DE1926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>name</key>
-			<string>Images.xcassets</string>
-			<key>path</key>
-			<string>Resources/Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321DF1926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321DE1926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321E01926108300A66F92</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FEE321E11926108300A66F92</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FEE321E61926108300A66F92</string>
-				<string>FEE321E81926108300A66F92</string>
-				<string>FEE321E71926108300A66F92</string>
-				<string>7A78B2BAD3B74DBFBD65AF9F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FEE321E21926108300A66F92</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FEE321E31926108300A66F92</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>FEE321F51926108300A66F92</string>
-			<key>buildPhases</key>
-			<array>
-				<string>EFB25CFD7E474E6AB1C9AB22</string>
-				<string>FEE321E01926108300A66F92</string>
-				<string>FEE321E11926108300A66F92</string>
-				<string>FEE321E21926108300A66F92</string>
-				<string>3FB1B3CAA62B4583931A4F47</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>FEE321EA1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>waveTests</string>
-			<key>productName</key>
-			<string>waveTests</string>
-			<key>productReference</key>
-			<string>FEE321E41926108300A66F92</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>FEE321E41926108300A66F92</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>waveTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>FEE321E51926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>FEE321E61926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321E51926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321E71926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321CC1926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321E81926108300A66F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FEE321D01926108300A66F92</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEE321E91926108300A66F92</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>FEE321C11926108200A66F92</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>FEE321C81926108300A66F92</string>
-			<key>remoteInfo</key>
-			<string>wave</string>
-		</dict>
-		<key>FEE321EA1926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>FEE321C81926108300A66F92</string>
-			<key>targetProxy</key>
-			<string>FEE321E91926108300A66F92</string>
-		</dict>
-		<key>FEE321EB1926108300A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321EC1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>waveTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321EC1926108300A66F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEE321ED1926108300A66F92</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Ancillary Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321ED1926108300A66F92</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>name</key>
-			<string>waveTests-Info.plist</string>
-			<key>path</key>
-			<string>Ancillary Files/waveTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE321EE1926108300A66F92</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>CONFIGURATION_RELEASE=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release Enterprise</string>
-		</dict>
-		<key>FEE321EF1926108300A66F92</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>FEE321F01926108300A66F92</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>CONFIGURATION_RELEASE=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>FEE321F11926108300A66F92</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>FEE321F21926108300A66F92</string>
-				<string>FEE321F31926108300A66F92</string>
-				<string>FEE321F41926108300A66F92</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>FEE321F21926108300A66F92</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>wave/Ancillary Files/wave-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>wave/Ancillary Files/wave-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release Enterprise</string>
-		</dict>
-		<key>FEE321F31926108300A66F92</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>wave/Ancillary Files/wave-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>wave/Ancillary Files/wave-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>FEE321F41926108300A66F92</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>wave/Ancillary Files/wave-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>wave/Ancillary Files/wave-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>FEE321F51926108300A66F92</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>FEE321F61926108300A66F92</string>
-				<string>FEE321F71926108300A66F92</string>
-				<string>FEE321F81926108300A66F92</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>FEE321F61926108300A66F92</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DF8A026449E049E8B3EDB215</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/wave.app/wave</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>wave/Ancillary Files/wave-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>CONFIGURATION_RELEASE=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>waveTests/Ancillary Files/waveTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release Enterprise</string>
-		</dict>
-		<key>FEE321F71926108300A66F92</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DF8A026449E049E8B3EDB215</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/wave.app/wave</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>wave/Ancillary Files/wave-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>waveTests/Ancillary Files/waveTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>FEE321F81926108300A66F92</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DF8A026449E049E8B3EDB215</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/wave.app/wave</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>wave/Ancillary Files/wave-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>CONFIGURATION_RELEASE=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>waveTests/Ancillary Files/waveTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>FEE321C11926108200A66F92</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D09B0B4DA410BE79885FEEF /* WVEMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */; };
+		7A78B2BAD3B74DBFBD65AF9F /* libPods-waveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F74449C348BC4E11B1A2968B /* libPods-waveTests.a */; };
+		FE6C5E5819261344007860D4 /* WVEMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6C5E5719261344007860D4 /* WVEMainViewController.xib */; };
+		FEE321CD1926108300A66F92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CC1926108300A66F92 /* Foundation.framework */; };
+		FEE321CF1926108300A66F92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CE1926108300A66F92 /* CoreGraphics.framework */; };
+		FEE321D11926108300A66F92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321D01926108300A66F92 /* UIKit.framework */; };
+		FEE321D61926108300A66F92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE321D51926108300A66F92 /* main.m */; };
+		FEE321DB1926108300A66F92 /* WVEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE321DA1926108300A66F92 /* WVEAppDelegate.m */; };
+		FEE321DF1926108300A66F92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE321DE1926108300A66F92 /* Images.xcassets */; };
+		FEE321E61926108300A66F92 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321E51926108300A66F92 /* XCTest.framework */; };
+		FEE321E71926108300A66F92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CC1926108300A66F92 /* Foundation.framework */; };
+		FEE321E81926108300A66F92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321D01926108300A66F92 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FEE321E91926108300A66F92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEE321C11926108200A66F92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEE321C81926108300A66F92;
+			remoteInfo = wave;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D09B5777E6FB136619CC193 /* WVEMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVEMainViewController.h; sourceTree = "<group>"; };
+		3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEMainViewController.m; sourceTree = "<group>"; };
+		DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waveTests.xcconfig"; path = "Pods/Pods-waveTests.xcconfig"; sourceTree = "<group>"; };
+		F74449C348BC4E11B1A2968B /* libPods-waveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-waveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6C5E5719261344007860D4 /* WVEMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WVEMainViewController.xib; sourceTree = "<group>"; };
+		FEE321C91926108300A66F92 /* wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE321CC1926108300A66F92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FEE321CE1926108300A66F92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FEE321D01926108300A66F92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FEE321D41926108300A66F92 /* wave-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wave-Info.plist"; sourceTree = "<group>"; };
+		FEE321D51926108300A66F92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FEE321D71926108300A66F92 /* wave-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wave-Prefix.pch"; sourceTree = "<group>"; };
+		FEE321D91926108300A66F92 /* WVEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WVEAppDelegate.h; sourceTree = "<group>"; };
+		FEE321DA1926108300A66F92 /* WVEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WVEAppDelegate.m; sourceTree = "<group>"; };
+		FEE321DC1926108300A66F92 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		FEE321DE1926108300A66F92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FEE321E41926108300A66F92 /* waveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE321E51926108300A66F92 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FEE321ED1926108300A66F92 /* waveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "waveTests-Info.plist"; path = "Ancillary Files/waveTests-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEE321C61926108300A66F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE321CF1926108300A66F92 /* CoreGraphics.framework in Frameworks */,
+				FEE321D11926108300A66F92 /* UIKit.framework in Frameworks */,
+				FEE321CD1926108300A66F92 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE321E11926108300A66F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE321E61926108300A66F92 /* XCTest.framework in Frameworks */,
+				FEE321E81926108300A66F92 /* UIKit.framework in Frameworks */,
+				FEE321E71926108300A66F92 /* Foundation.framework in Frameworks */,
+				7A78B2BAD3B74DBFBD65AF9F /* libPods-waveTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D09B18DE4EB278E1191C548 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE6C5E5719261344007860D4 /* WVEMainViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D09B8C2B27956495F5F91F6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */,
+				3D09B5777E6FB136619CC193 /* WVEMainViewController.h */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FEE321C01926108200A66F92 = {
+			isa = PBXGroup;
+			children = (
+				FEE321D21926108300A66F92 /* wave */,
+				FEE321EB1926108300A66F92 /* waveTests */,
+				FEE321CB1926108300A66F92 /* Frameworks */,
+				FEE321CA1926108300A66F92 /* Products */,
+				DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		FEE321CA1926108300A66F92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321C91926108300A66F92 /* wave.app */,
+				FEE321E41926108300A66F92 /* waveTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEE321CB1926108300A66F92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321CC1926108300A66F92 /* Foundation.framework */,
+				FEE321CE1926108300A66F92 /* CoreGraphics.framework */,
+				FEE321D01926108300A66F92 /* UIKit.framework */,
+				FEE321E51926108300A66F92 /* XCTest.framework */,
+				F74449C348BC4E11B1A2968B /* libPods-waveTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEE321D21926108300A66F92 /* wave */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321DC1926108300A66F92 /* Podfile */,
+				FEE321D31926108300A66F92 /* Ancillary Files */,
+				FEE321D81926108300A66F92 /* Classes */,
+				FEE321DD1926108300A66F92 /* Resources */,
+			);
+			path = wave;
+			sourceTree = "<group>";
+		};
+		FEE321D31926108300A66F92 /* Ancillary Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321D41926108300A66F92 /* wave-Info.plist */,
+				FEE321D51926108300A66F92 /* main.m */,
+				FEE321D71926108300A66F92 /* wave-Prefix.pch */,
+			);
+			path = "Ancillary Files";
+			sourceTree = "<group>";
+		};
+		FEE321D81926108300A66F92 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321D91926108300A66F92 /* WVEAppDelegate.h */,
+				FEE321DA1926108300A66F92 /* WVEAppDelegate.m */,
+				3D09B8C2B27956495F5F91F6 /* View Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FEE321DD1926108300A66F92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321DE1926108300A66F92 /* Images.xcassets */,
+				3D09B18DE4EB278E1191C548 /* Views */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FEE321EB1926108300A66F92 /* waveTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321EC1926108300A66F92 /* Ancillary Files */,
+			);
+			path = waveTests;
+			sourceTree = "<group>";
+		};
+		FEE321EC1926108300A66F92 /* Ancillary Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321ED1926108300A66F92 /* waveTests-Info.plist */,
+			);
+			name = "Ancillary Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEE321C81926108300A66F92 /* wave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEE321F11926108300A66F92 /* Build configuration list for PBXNativeTarget "wave" */;
+			buildPhases = (
+				FEE321C51926108300A66F92 /* Sources */,
+				FEE321C61926108300A66F92 /* Frameworks */,
+				FEE321C71926108300A66F92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wave;
+			productName = wave;
+			productReference = FEE321C91926108300A66F92 /* wave.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FEE321E31926108300A66F92 /* waveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEE321F51926108300A66F92 /* Build configuration list for PBXNativeTarget "waveTests" */;
+			buildPhases = (
+				EFB25CFD7E474E6AB1C9AB22 /* Check Pods Manifest.lock */,
+				FEE321E01926108300A66F92 /* Sources */,
+				FEE321E11926108300A66F92 /* Frameworks */,
+				FEE321E21926108300A66F92 /* Resources */,
+				3FB1B3CAA62B4583931A4F47 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEE321EA1926108300A66F92 /* PBXTargetDependency */,
+			);
+			name = waveTests;
+			productName = waveTests;
+			productReference = FEE321E41926108300A66F92 /* waveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEE321C11926108200A66F92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WVE;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = wave;
+				TargetAttributes = {
+					FEE321E31926108300A66F92 = {
+						TestTargetID = FEE321C81926108300A66F92;
+					};
+				};
+			};
+			buildConfigurationList = FEE321C41926108200A66F92 /* Build configuration list for PBXProject "wave" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FEE321C01926108200A66F92;
+			productRefGroup = FEE321CA1926108300A66F92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEE321C81926108300A66F92 /* wave */,
+				FEE321E31926108300A66F92 /* waveTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEE321C71926108300A66F92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6C5E5819261344007860D4 /* WVEMainViewController.xib in Resources */,
+				FEE321DF1926108300A66F92 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE321E21926108300A66F92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FB1B3CAA62B4583931A4F47 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-waveTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFB25CFD7E474E6AB1C9AB22 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEE321C51926108300A66F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE321D61926108300A66F92 /* main.m in Sources */,
+				FEE321DB1926108300A66F92 /* WVEAppDelegate.m in Sources */,
+				3D09B0B4DA410BE79885FEEF /* WVEMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE321E01926108300A66F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FEE321EA1926108300A66F92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEE321C81926108300A66F92 /* wave */;
+			targetProxy = FEE321E91926108300A66F92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FEE321EE1926108300A66F92 /* Release Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Enterprise";
+		};
+		FEE321EF1926108300A66F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FEE321F01926108300A66F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEE321F21926108300A66F92 /* Release Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				INFOPLIST_FILE = "wave/Ancillary Files/wave-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Release Enterprise";
+		};
+		FEE321F31926108300A66F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				INFOPLIST_FILE = "wave/Ancillary Files/wave-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FEE321F41926108300A66F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				INFOPLIST_FILE = "wave/Ancillary Files/wave-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FEE321F61926108300A66F92 /* Release Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wave.app/wave";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "waveTests/Ancillary Files/waveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Release Enterprise";
+		};
+		FEE321F71926108300A66F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wave.app/wave";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "waveTests/Ancillary Files/waveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FEE321F81926108300A66F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wave.app/wave";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "waveTests/Ancillary Files/waveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEE321C41926108200A66F92 /* Build configuration list for PBXProject "wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE321EE1926108300A66F92 /* Release Enterprise */,
+				FEE321EF1926108300A66F92 /* Debug */,
+				FEE321F01926108300A66F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEE321F11926108300A66F92 /* Build configuration list for PBXNativeTarget "wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE321F21926108300A66F92 /* Release Enterprise */,
+				FEE321F31926108300A66F92 /* Debug */,
+				FEE321F41926108300A66F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEE321F51926108300A66F92 /* Build configuration list for PBXNativeTarget "waveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE321F61926108300A66F92 /* Release Enterprise */,
+				FEE321F71926108300A66F92 /* Debug */,
+				FEE321F81926108300A66F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEE321C11926108200A66F92 /* Project object */;
+}
