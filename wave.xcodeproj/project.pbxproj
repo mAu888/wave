@@ -12,6 +12,7 @@
 		3D09B8067D6EA19FABFC6994 /* constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B94E53AA01BCB44D40EB /* constants.m */; };
 		3D09BAEBBBF5B469D8268C5A /* WVEMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */; };
 		3D09BBEF86DEE2EC17F545D6 /* WVEBeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B8CE299932317790FF18 /* WVEBeaconHandler.m */; };
+		44475A82E1DEF2D385E2EF22 /* closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 44475B3F38BC36CA25ABBDBC /* closeButton.png */; };
 		44475E904AFF897C6D80BF48 /* WVEAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 444754F70B38C819AE33AF38 /* WVEAnimationViewController.m */; };
 		7A78B2BAD3B74DBFBD65AF9F /* libPods-waveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F74449C348BC4E11B1A2968B /* libPods-waveTests.a */; };
 		FE6C5E5819261344007860D4 /* WVEMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6C5E5719261344007860D4 /* WVEMainViewController.xib */; };
@@ -47,6 +48,7 @@
 		3D09BD471E702DD1180C02D1 /* CLBeacon+WVEBeaconAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+WVEBeaconAdditions.m"; sourceTree = "<group>"; };
 		3D09BE55A7DA2B075190ACF3 /* CLBeacon+WVEBeaconAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+WVEBeaconAdditions.h"; sourceTree = "<group>"; };
 		444754F70B38C819AE33AF38 /* WVEAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEAnimationViewController.m; sourceTree = "<group>"; };
+		44475B3F38BC36CA25ABBDBC /* closeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeButton.png; sourceTree = "<group>"; };
 		44475BDA2CEBA5BB438B14F7 /* WVEAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVEAnimationViewController.h; sourceTree = "<group>"; };
 		DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waveTests.xcconfig"; path = "Pods/Pods-waveTests.xcconfig"; sourceTree = "<group>"; };
 		F74449C348BC4E11B1A2968B /* libPods-waveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-waveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +211,7 @@
 			children = (
 				FEE321DE1926108300A66F92 /* Images.xcassets */,
 				3D09B18DE4EB278E1191C548 /* Views */,
+				44475B3F38BC36CA25ABBDBC /* closeButton.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				FE6C5E5819261344007860D4 /* WVEMainViewController.xib in Resources */,
 				FEE321DF1926108300A66F92 /* Images.xcassets in Resources */,
+				44475A82E1DEF2D385E2EF22 /* closeButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +528,7 @@
 				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
 				INFOPLIST_FILE = "wave/Ancillary Files/wave-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "AA38FC96-DE65-48CA-A33A-076CC87B1FBF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

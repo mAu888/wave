@@ -15,14 +15,13 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////
-@interface WVEMainViewController () <WVEBeaconHandlerDelegate>
+@interface WVEMainViewController () <WVEBeaconHandlerDelegate, UIAlertViewDelegate>
 
 @property(weak, nonatomic) IBOutlet UIButton *startWavingButton;
 @property(weak, nonatomic) IBOutlet UIButton *stopWavingButton;
 @property(weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
-@property(strong, nonatomic) WVEBeaconHandler *beaconHandler;
-@property(weak, nonatomic) IBOutlet UIView *peersNearbyView;
-@property(weak, nonatomic) IBOutlet UILabel *peersNearbyLabel;
+@property(strong, nonatomic) WVEBeaconHandler *beaconHandler;;
+@property(weak, nonatomic) IBOutlet UIButton *peersNearbyButton;
 
 @end
 
@@ -30,7 +29,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 @implementation WVEMainViewController
 {
-    BOOL _shakeViewVisible;
     NSArray *_colorsArray;
     NSUInteger _nextColorIndex;
 }
@@ -75,7 +73,6 @@
 {
     [super viewDidLoad];
     [self updateUI];
-    [self becomeFirstResponder];
 }
 
 - (void)updateUI
@@ -86,30 +83,31 @@
     {
         self.startWavingButton.hidden = YES;
         self.stopWavingButton.hidden = NO;
-//        self.backgroundImageView.highlighted = YES;
         [self toggleBackgroundImage:YES];
     }
     else
     {
         self.startWavingButton.hidden = NO;
         self.stopWavingButton.hidden = YES;
-//        self.backgroundImageView.highlighted = NO;
         [self toggleBackgroundImage:NO];
     }
 
     NSString *text = nil;
-    if ( self.beaconHandler.beaconsNearby.count == 1 )
+    if ( isActive )
     {
-        text = NSLocalizedString(@"One person nearby", nil);
-    }
-    else
-    {
-        text = [NSString stringWithFormat:NSLocalizedString(@"%d people nearby", nil),
-                                          self.beaconHandler.beaconsNearby.count];
+        if ( self.beaconHandler.beaconsNearby.count == 1 )
+        {
+            text = NSLocalizedString(@"One person nearby", nil);
+        }
+        else
+        {
+            text = [NSString stringWithFormat:NSLocalizedString(@"%d people nearby", nil),
+                                              self.beaconHandler.beaconsNearby.count];
+        }
     }
 
-    self.peersNearbyLabel.text = text;
-    self.peersNearbyView.hidden = self.beaconHandler.beaconsNearby.count == 0 || !isActive;
+    [self.peersNearbyButton setTitle:text forState:UIControlStateNormal];
+    self.peersNearbyButton.hidden = self.beaconHandler.beaconsNearby.count == 0 || !isActive;
 }
 
 #pragma mark - Wave
@@ -126,7 +124,7 @@
     [self updateUI];
 }
 
--(void)toggleBackgroundImage:(BOOL)on
+- (void)toggleBackgroundImage:(BOOL)on
 {
     _backgroundImageView.image = [UIImage imageNamed:on ? @"berlinON.jpg" : @"berlinOFF.jpg"];
 
@@ -164,39 +162,26 @@
 {
     UIAlertView *alertView = [[UIAlertView alloc]
         initWithTitle:NSLocalizedString(@"Hey", nil)
-              message:NSLocalizedString(@"There's someone near you!", nil)
-             delegate:nil
+              message:NSLocalizedString(@"There's someone near you! Take your phone up in the air!", nil)
+             delegate:self
     cancelButtonTitle:NSLocalizedString(@"Ok, thanks!", nil)
     otherButtonTitles:nil];
     [alertView show];
 }
 
-
-#pragma mark - Shake detector
-- (BOOL)canBecomeFirstResponder
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    return YES;
+    [self showAnimationView:self];
 }
 
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+- (IBAction)showAnimationView:(id)sender
 {
-    if (motion == UIEventSubtypeMotionShake && !_shakeViewVisible )
-    {
-        _shakeViewVisible = YES;
-        WVEAnimationViewController *vc = [[WVEAnimationViewController alloc] initWithColor:_colorsArray[_nextColorIndex]];
-        [vc setDelegate:self];
-        [self presentViewController:vc
-                           animated:YES
-                         completion:nil];
-        _nextColorIndex = _nextColorIndex + 1 >= [_colorsArray count] ? 0 : _nextColorIndex + 1;
-    }
+    WVEAnimationViewController *vc = [[WVEAnimationViewController alloc] initWithColor:_colorsArray[_nextColorIndex]];
+    [self presentViewController:vc
+                       animated:YES
+                     completion:nil];
+    _nextColorIndex = _nextColorIndex + 1 >= [_colorsArray count] ? 0 : _nextColorIndex + 1;
 }
 
-- (void)viewIsDismissed
-{
-    _shakeViewVisible = NO;
-    [self becomeFirstResponder];
-}
-
-#pragma
 @end

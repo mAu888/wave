@@ -73,19 +73,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     _viewsArray = [NSMutableArray new];
     [self setupView];
+}
+
+- (void)closeView
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)setupView
 {
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    int rows = CGRectGetHeight([self.view bounds]) / (squareWidth + spacing);
-    int columns = CGRectGetHeight([self.view bounds]) / (squareWidth + spacing);
+    int rows = ceil(CGRectGetHeight([self.view bounds]) / (squareWidth + spacing));
+    int columns = ceil(CGRectGetHeight([self.view bounds]) / (squareWidth + spacing));
+
     for(int i = 0; i < rows; i++)
     {
-        for(int j = 0; j <= columns; j++)
+        for(int j = 0; j < columns; j++)
         {
             UIView *tmpView = [[UIView alloc] initWithFrame:
                                                   CGRectMake(spacing + j*(squareWidth+ spacing),
@@ -98,12 +103,21 @@
             [self.view addSubview:tmpView];
         }
     }
+
+    UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(
+        CGRectGetWidth(self.view.bounds) - 50.f,
+        20.f,
+        40.f,
+        40.f)
+    ];
+    [closeButton setImage:[UIImage imageNamed:@"closeButton.png"] forState:UIControlStateNormal];
+    [closeButton addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:closeButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self becomeFirstResponder];
     [self animateColor];
 }
 
@@ -111,8 +125,8 @@
 {
     [_viewsArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
     {
-        [UIView animateWithDuration:0.5
-                              delay:0.1*idx
+        [UIView animateWithDuration:0.3
+                              delay:0.05*idx
                             options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationCurveEaseInOut
                          animations:^
                          {
@@ -127,25 +141,6 @@
                          }];
 
     }];
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake)
-    {
-        [self dismissViewControllerAnimated:YES completion:^
-        {
-            if ( [_delegate respondsToSelector:@selector(viewIsDismissed)] )
-            {
-                [_delegate performSelector:@selector(viewIsDismissed)];
-            }
-        }];
-    }
-}
-
-- (BOOL)canBecomeFirstResponder
-{
-    return YES;
 }
 
 @end

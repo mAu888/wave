@@ -6,6 +6,5 @@
 #import <Foundation/Foundation.h>
 
 @interface WVEAnimationViewController : UIViewController
-@property (nonatomic, assign) id delegate;
 - (id)initWithColor:(UIColor *)color;
 @end
