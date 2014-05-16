@@ -75,13 +75,15 @@
     {
         self.startWavingButton.hidden = YES;
         self.stopWavingButton.hidden = NO;
-        self.backgroundImageView.highlighted = YES;
+//        self.backgroundImageView.highlighted = YES;
+        [self toggleBackgroundImage:YES];
     }
     else
     {
         self.startWavingButton.hidden = NO;
         self.stopWavingButton.hidden = YES;
-        self.backgroundImageView.highlighted = NO;
+//        self.backgroundImageView.highlighted = NO;
+        [self toggleBackgroundImage:NO];
     }
 
     NSString *text = nil;
@@ -98,7 +100,6 @@
     self.peersNearbyView.hidden = self.beaconHandler.beaconsNearby.count == 0;
 }
 
-
 #pragma mark - Wave
 
 - (IBAction)startWaving:(UIButton *)button
@@ -113,6 +114,17 @@
     [self updateUI];
 }
 
+-(void)toggleBackgroundImage:(BOOL)on
+{
+    _backgroundImageView.image = [UIImage imageNamed:on ? @"berlinON.jpg" : @"berlinOFF.jpg"];
+
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.4f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFromBottom;
+
+    [_backgroundImageView.layer addAnimation:transition forKey:nil];
+}
 
 #pragma mark - WVEBeaconHandlerDelegate
 
