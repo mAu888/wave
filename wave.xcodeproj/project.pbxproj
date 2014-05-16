@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D09B0B4DA410BE79885FEEF /* WVEMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */; };
+		3D09BAEBBBF5B469D8268C5A /* WVEMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */; };
 		7A78B2BAD3B74DBFBD65AF9F /* libPods-waveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F74449C348BC4E11B1A2968B /* libPods-waveTests.a */; };
 		FE6C5E5819261344007860D4 /* WVEMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6C5E5719261344007860D4 /* WVEMainViewController.xib */; };
 		FEE321CD1926108300A66F92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CC1926108300A66F92 /* Foundation.framework */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEMainViewControllerTests.m; sourceTree = "<group>"; };
 		3D09B5777E6FB136619CC193 /* WVEMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVEMainViewController.h; sourceTree = "<group>"; };
 		3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEMainViewController.m; sourceTree = "<group>"; };
 		DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waveTests.xcconfig"; path = "Pods/Pods-waveTests.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				FEE321EC1926108300A66F92 /* Ancillary Files */,
+				3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */,
 			);
 			path = waveTests;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D09BAEBBBF5B469D8268C5A /* WVEMainViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

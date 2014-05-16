@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WVEMainViewController">
             <connections>
                 <outlet property="logTextView" destination="qJN-mZ-Q0j" id="gur-8v-SkT"/>
+                <outlet property="startWavingButton" destination="eaj-e0-fVe" id="qTC-3u-9Rf"/>
+                <outlet property="stopWavingButton" destination="a5O-31-ATD" id="cN6-Rv-Bbg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Uly-mZ-Dlz"/>
             </connections>
         </placeholder>
@@ -15,25 +17,42 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaj-e0-fVe">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaj-e0-fVe">
                     <rect key="frame" x="137" y="269" width="58" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="wave &lt;3">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="startTheWave:" destination="-1" eventType="touchUpInside" id="ToJ-6G-QXQ"/>
+                        <action selector="startWaving:" destination="-1" eventType="touchUpInside" id="ToJ-6G-QXQ"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5O-31-ATD">
+                    <rect key="frame" x="114" y="269" width="104" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="stop waving">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startWaving:" destination="-1" eventType="touchUpInside" id="twZ-jE-O1T"/>
+                        <action selector="stopWaving:" destination="-1" eventType="touchUpInside" id="wom-WT-wa9"/>
                     </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJN-mZ-Q0j">
                     <rect key="frame" x="0.0" y="307" width="320" height="261"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="a5O-31-ATD" secondAttribute="centerY" id="jJf-AP-kc3"/>
+                <constraint firstAttribute="centerX" secondItem="eaj-e0-fVe" secondAttribute="centerX" id="oUi-g8-cTU"/>
+                <constraint firstAttribute="centerY" secondItem="eaj-e0-fVe" secondAttribute="centerY" id="rYz-Uk-G5X"/>
+                <constraint firstAttribute="centerX" secondItem="a5O-31-ATD" secondAttribute="centerX" id="yPI-IF-tqV"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
