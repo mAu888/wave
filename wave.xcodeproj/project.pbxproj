@@ -12,9 +12,7 @@
 		3D09B8067D6EA19FABFC6994 /* constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B94E53AA01BCB44D40EB /* constants.m */; };
 		3D09BAEBBBF5B469D8268C5A /* WVEMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */; };
 		3D09BBEF86DEE2EC17F545D6 /* WVEBeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B8CE299932317790FF18 /* WVEBeaconHandler.m */; };
-		44475A09D09656A80B8C2BDF /* APLCompositeBehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44475218B9F733787A42ADAC /* APLCompositeBehaviorViewController.m */; };
-		44475FF241716AB8350279E6 /* APLPendulumBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 44475AD2716B065FADFD84C4 /* APLPendulumBehavior.m */; };
-		5C5D9E94192634D6001BC35D /* WVEShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D9E93192634D6001BC35D /* WVEShapeView.m */; };
+		44475E904AFF897C6D80BF48 /* WVEAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 444754F70B38C819AE33AF38 /* WVEAnimationViewController.m */; };
 		7A78B2BAD3B74DBFBD65AF9F /* libPods-waveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F74449C348BC4E11B1A2968B /* libPods-waveTests.a */; };
 		FE6C5E5819261344007860D4 /* WVEMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6C5E5719261344007860D4 /* WVEMainViewController.xib */; };
 		FEE321CD1926108300A66F92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CC1926108300A66F92 /* Foundation.framework */; };
@@ -48,12 +46,8 @@
 		3D09B9D572A7E132CCB46711 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		3D09BD471E702DD1180C02D1 /* CLBeacon+WVEBeaconAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+WVEBeaconAdditions.m"; sourceTree = "<group>"; };
 		3D09BE55A7DA2B075190ACF3 /* CLBeacon+WVEBeaconAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+WVEBeaconAdditions.h"; sourceTree = "<group>"; };
-		44475218B9F733787A42ADAC /* APLCompositeBehaviorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCompositeBehaviorViewController.m; sourceTree = "<group>"; };
-		444752AFE46A842B401B3E96 /* APLCompositeBehaviorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCompositeBehaviorViewController.h; sourceTree = "<group>"; };
-		44475AD2716B065FADFD84C4 /* APLPendulumBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLPendulumBehavior.m; sourceTree = "<group>"; };
-		44475DF13F09DFEA64D004F5 /* APLPendulumBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLPendulumBehavior.h; sourceTree = "<group>"; };
-		5C5D9E92192634D6001BC35D /* WVEShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVEShapeView.h; sourceTree = "<group>"; };
-		5C5D9E93192634D6001BC35D /* WVEShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEShapeView.m; sourceTree = "<group>"; };
+		444754F70B38C819AE33AF38 /* WVEAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEAnimationViewController.m; sourceTree = "<group>"; };
+		44475BDA2CEBA5BB438B14F7 /* WVEAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVEAnimationViewController.h; sourceTree = "<group>"; };
 		DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waveTests.xcconfig"; path = "Pods/Pods-waveTests.xcconfig"; sourceTree = "<group>"; };
 		F74449C348BC4E11B1A2968B /* libPods-waveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-waveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6C5E5719261344007860D4 /* WVEMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WVEMainViewController.xib; sourceTree = "<group>"; };
@@ -120,10 +114,8 @@
 			children = (
 				3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */,
 				3D09B5777E6FB136619CC193 /* WVEMainViewController.h */,
-				444752AFE46A842B401B3E96 /* APLCompositeBehaviorViewController.h */,
-				44475218B9F733787A42ADAC /* APLCompositeBehaviorViewController.m */,
-				5C5D9E92192634D6001BC35D /* WVEShapeView.h */,
-				5C5D9E93192634D6001BC35D /* WVEShapeView.m */,
+				444754F70B38C819AE33AF38 /* WVEAnimationViewController.m */,
+				44475BDA2CEBA5BB438B14F7 /* WVEAnimationViewController.h */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -140,8 +132,6 @@
 		4447531890CC95DD5CEA2A53 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				44475DF13F09DFEA64D004F5 /* APLPendulumBehavior.h */,
-				44475AD2716B065FADFD84C4 /* APLPendulumBehavior.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,7 +281,7 @@
 				ORGANIZATIONNAME = wave;
 				TargetAttributes = {
 					FEE321E31926108300A66F92 = {
-						TestTargetID = FEE321C81926108300A66F92;
+						TestTargetID = FEE321C81926108300A66F92 /* wave */;
 					};
 				};
 			};
@@ -373,12 +363,10 @@
 				FEE321D61926108300A66F92 /* main.m in Sources */,
 				FEE321DB1926108300A66F92 /* WVEAppDelegate.m in Sources */,
 				3D09B0B4DA410BE79885FEEF /* WVEMainViewController.m in Sources */,
-				5C5D9E94192634D6001BC35D /* WVEShapeView.m in Sources */,
-				44475A09D09656A80B8C2BDF /* APLCompositeBehaviorViewController.m in Sources */,
-				44475FF241716AB8350279E6 /* APLPendulumBehavior.m in Sources */,
 				3D09B8067D6EA19FABFC6994 /* constants.m in Sources */,
 				3D09B61FE857AFE5DB1B8CB9 /* CLBeacon+WVEBeaconAdditions.m in Sources */,
 				3D09BBEF86DEE2EC17F545D6 /* WVEBeaconHandler.m in Sources */,
+				44475E904AFF897C6D80BF48 /* WVEAnimationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

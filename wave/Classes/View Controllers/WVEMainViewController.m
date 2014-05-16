@@ -8,6 +8,7 @@
 
 #import "WVEMainViewController.h"
 #import "WVEBeaconHandler.h"
+#import "WVEAnimationViewController.h"
 
 @import CoreBluetooth;
 @import CoreLocation;
@@ -28,6 +29,11 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 @implementation WVEMainViewController
+{
+    BOOL _shakeViewVisible;
+    NSArray *_colorsArray;
+    NSUInteger _nextColorIndex;
+}
 
 - (void)dealloc
 {
@@ -55,6 +61,9 @@
                selector:@selector(didReceiveLocalNotification:)
                    name:WVEDidReceiveLocalNotification
                  object:nil];
+
+        _colorsArray = @[[UIColor yellowColor], [UIColor redColor], [UIColor greenColor]];
+        _nextColorIndex = 0;
     }
 
     return self;
@@ -64,7 +73,9 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     [self updateUI];
+    [self becomeFirstResponder];
 }
 
 - (void)updateUI
@@ -143,4 +154,32 @@
     [alertView show];
 }
 
+
+#pragma mark - Shake detector
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake && !_shakeViewVisible )
+    {
+        _shakeViewVisible = YES;
+        WVEAnimationViewController *vc = [[WVEAnimationViewController alloc] initWithColor:_colorsArray[_nextColorIndex]];
+        [vc setDelegate:self];
+        [self presentViewController:vc
+                           animated:YES
+                         completion:nil];
+        _nextColorIndex = _nextColorIndex + 1 >= [_colorsArray count] ? 0 : _nextColorIndex + 1;
+    }
+}
+
+- (void)viewIsDismissed
+{
+    _shakeViewVisible = NO;
+    [self becomeFirstResponder];
+}
+
+#pragma
 @end
