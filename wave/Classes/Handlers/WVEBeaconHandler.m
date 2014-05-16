@@ -21,6 +21,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
 @property(strong, nonatomic) CBPeripheralManager *peripheralManager;
 @property(strong, nonatomic) CLLocationManager *locationManager;
 
+@property(nonatomic, strong) NSTimer *cleanupTimer;
 @end
 
 
@@ -61,6 +62,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
 
     [self startBeaconAdvertising];
     [self startListeningForBeacons];
+    [self startCleanupTimer];
 }
 
 - (void)stop
@@ -74,6 +76,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
 
     [self stopBeaconAdvertising];
     [self stopListeningForBeacons];
+    [self stopCleanupTimer];
 }
 
 
@@ -117,6 +120,8 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
         didRangeBeacons:(NSArray *)beacons
                inRegion:(CLBeaconRegion *)region
 {
+    [self cleanTimedOutBeacons];
+
     NSMutableSet *newBeacons = [NSMutableSet set];
     [beacons enumerateObjectsUsingBlock:^(CLBeacon *beacon, NSUInteger idx, BOOL *stop) {
         __block BOOL isKnownBeacon = NO;
@@ -125,6 +130,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
                 && [knownBeacon.minor isEqualToNumber:beacon.minor]
                 && [knownBeacon.proximityUUID isEqual:beacon.proximityUUID] )
             {
+                knownBeacon.lastBeaconUpdateDate = [NSDate date];
                 isKnownBeacon = YES;
                 *innerStop = YES;
             }
@@ -138,16 +144,23 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
     }];
 
     self.beaconsNearby = [self.beaconsNearby setByAddingObjectsFromSet:newBeacons];
+    if ( [self.delegate respondsToSelector:@selector(beaconHandler:didUpdateBeaconsWithNewBeacons:)] )
+    {
+        [self.delegate beaconHandler:self didUpdateBeaconsWithNewBeacons:[NSSet setWithSet:newBeacons]];
+    }
+}
+
+- (void)cleanTimedOutBeacons
+{
     self.beaconsNearby = [self.beaconsNearby filteredSetUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(CLBeacon *beacon, NSDictionary *bindings) {
         // Consider beacons with unknown distance as not reachable
         return beacon.proximity != CLProximityUnknown
             && [[NSDate date] timeIntervalSinceDate:beacon.lastBeaconUpdateDate] < self.beaconValidityTimeInterval;
     }]];
 
-    if ( newBeacons.count > 0
-        && [self.delegate respondsToSelector:@selector(beaconHandler:didRecognizeNewBeacons:)] )
+    if ( [self.delegate respondsToSelector:@selector(beaconHandler:didUpdateBeaconsWithNewBeacons:)] )
     {
-        [self.delegate beaconHandler:self didRecognizeNewBeacons:[NSSet setWithSet:newBeacons]];
+        [self.delegate beaconHandler:self didUpdateBeaconsWithNewBeacons:nil];
     }
 }
 
@@ -163,6 +176,21 @@ rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
 
 
 #pragma mark - Private methods
+
+- (void)startCleanupTimer
+{
+    self.cleanupTimer = [NSTimer scheduledTimerWithTimeInterval:5
+                                                         target:self
+                                                       selector:@selector(cleanTimedOutBeacons)
+                                                       userInfo:nil
+                                                        repeats:YES];
+}
+
+- (void)stopCleanupTimer
+{
+    [self.cleanupTimer invalidate];
+    self.cleanupTimer = nil;
+}
 
 - (CLBeaconRegion *)beaconRegion
 {

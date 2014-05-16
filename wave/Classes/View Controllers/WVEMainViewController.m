@@ -19,10 +19,10 @@
 
 @property(weak, nonatomic) IBOutlet UIButton *startWavingButton;
 @property(weak, nonatomic) IBOutlet UIButton *stopWavingButton;
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property(weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property(strong, nonatomic) WVEBeaconHandler *beaconHandler;
-@property (weak, nonatomic) IBOutlet UIView *peersNearbyView;
-@property (weak, nonatomic) IBOutlet UILabel *peersNearbyLabel;
+@property(weak, nonatomic) IBOutlet UIView *peersNearbyView;
+@property(weak, nonatomic) IBOutlet UILabel *peersNearbyLabel;
 
 @end
 
@@ -102,11 +102,12 @@
     }
     else
     {
-        text = [NSString stringWithFormat:NSLocalizedString(@"%d people nearby", nil), self.beaconHandler.beaconsNearby.count];
+        text = [NSString stringWithFormat:NSLocalizedString(@"%d people nearby", nil),
+                                          self.beaconHandler.beaconsNearby.count];
     }
 
     self.peersNearbyLabel.text = text;
-    self.peersNearbyView.hidden = self.beaconHandler.beaconsNearby.count == 0;
+    self.peersNearbyView.hidden = self.beaconHandler.beaconsNearby.count == 0 || !isActive;
 }
 
 
@@ -127,9 +128,13 @@
 
 #pragma mark - WVEBeaconHandlerDelegate
 
-- (void)beaconHandler:(WVEBeaconHandler *)handler didRecognizeNewBeacons:(NSSet *)beacons
+- (void)beaconHandler:(WVEBeaconHandler *)handler didUpdateBeaconsWithNewBeacons:(NSSet *)newBeacons
 {
-    [self triggerLocalNotification];
+    if ( newBeacons.count > 0 )
+    {
+        [self triggerLocalNotification];
+    }
+
     [self updateUI];
 }
 
