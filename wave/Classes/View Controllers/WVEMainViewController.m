@@ -18,8 +18,10 @@
 
 @property(weak, nonatomic) IBOutlet UIButton *startWavingButton;
 @property(weak, nonatomic) IBOutlet UIButton *stopWavingButton;
-@property(weak, nonatomic) IBOutlet UITextView *logTextView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property(strong, nonatomic) WVEBeaconHandler *beaconHandler;
+@property (weak, nonatomic) IBOutlet UIView *peersNearbyView;
+@property (weak, nonatomic) IBOutlet UILabel *peersNearbyLabel;
 
 @end
 
@@ -73,14 +75,27 @@
     {
         self.startWavingButton.hidden = YES;
         self.stopWavingButton.hidden = NO;
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"berlinON.png"]];
+        self.backgroundImageView.highlighted = YES;
     }
     else
     {
         self.startWavingButton.hidden = NO;
         self.stopWavingButton.hidden = YES;
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"berlinOFF.png"]];
+        self.backgroundImageView.highlighted = NO;
     }
+
+    NSString *text = nil;
+    if ( self.beaconHandler.beaconsNearby.count == 1 )
+    {
+        text = NSLocalizedString(@"One person nearby", nil);
+    }
+    else
+    {
+        text = [NSString stringWithFormat:NSLocalizedString(@"%d people nearby", nil), self.beaconHandler.beaconsNearby.count];
+    }
+
+    self.peersNearbyLabel.text = text;
+    self.peersNearbyView.hidden = self.beaconHandler.beaconsNearby.count == 0;
 }
 
 
@@ -104,29 +119,6 @@
 - (void)beaconHandler:(WVEBeaconHandler *)handler didRecognizeNewBeacons:(NSSet *)beacons
 {
     [self triggerLocalNotification];
-    [beacons enumerateObjectsUsingBlock:^void(CLBeacon *beacon, BOOL *stop) {
-        NSString *distanceString = nil;
-        switch ( beacon.proximity )
-        {
-            case CLProximityUnknown:
-                distanceString = @"unknown";
-                break;
-            case CLProximityImmediate:
-                distanceString = @"immediate";
-                break;
-            case CLProximityNear:
-                distanceString = @"near";
-                break;
-            case CLProximityFar:
-                distanceString = @"far";
-                break;
-        }
-        NSString *logString = [NSString stringWithFormat:@"New beacon (%d.%d) is %@\n",
-                                                         [beacon.major intValue],
-                                                         [beacon.minor intValue],
-                                                         distanceString];
-        self.logTextView.text = [logString stringByAppendingString:self.logTextView.text];
-    }];
 }
 
 

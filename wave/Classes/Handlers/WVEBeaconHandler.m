@@ -20,7 +20,6 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
 
 @property(strong, nonatomic) CBPeripheralManager *peripheralManager;
 @property(strong, nonatomic) CLLocationManager *locationManager;
-@property(strong, nonatomic) NSSet *knownBeacons;
 
 @end
 
@@ -39,7 +38,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
 
     if ( self )
     {
-        _knownBeacons = [NSSet set];
+        _beaconsNearby = [NSSet set];
         _beaconValidityTimeInterval = 300;
     }
 
@@ -121,7 +120,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
     NSMutableSet *newBeacons = [NSMutableSet set];
     [beacons enumerateObjectsUsingBlock:^(CLBeacon *beacon, NSUInteger idx, BOOL *stop) {
         __block BOOL isKnownBeacon = NO;
-        [self.knownBeacons enumerateObjectsUsingBlock:^(CLBeacon *knownBeacon, BOOL *innerStop) {
+        [self.beaconsNearby enumerateObjectsUsingBlock:^(CLBeacon *knownBeacon, BOOL *innerStop) {
             if ( [knownBeacon.major isEqualToNumber:beacon.major]
                 && [knownBeacon.minor isEqualToNumber:beacon.minor]
                 && [knownBeacon.proximityUUID isEqual:beacon.proximityUUID] )
@@ -138,8 +137,8 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
         }
     }];
 
-    self.knownBeacons = [self.knownBeacons setByAddingObjectsFromSet:newBeacons];
-    self.knownBeacons = [self.knownBeacons filteredSetUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(CLBeacon *beacon, NSDictionary *bindings) {
+    self.beaconsNearby = [self.beaconsNearby setByAddingObjectsFromSet:newBeacons];
+    self.beaconsNearby = [self.beaconsNearby filteredSetUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(CLBeacon *beacon, NSDictionary *bindings) {
         // Consider beacons with unknown distance as not reachable
         return beacon.proximity != CLProximityUnknown
             && [[NSDate date] timeIntervalSinceDate:beacon.lastBeaconUpdateDate] < self.beaconValidityTimeInterval;

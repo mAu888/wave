@@ -473,7 +473,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "AA38FC96-DE65-48CA-A33A-076CC87B1FBF";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -537,7 +536,6 @@
 				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
 				INFOPLIST_FILE = "wave/Ancillary Files/wave-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C7E92C60-AD30-45FF-80E6-F548C90FDB8B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
