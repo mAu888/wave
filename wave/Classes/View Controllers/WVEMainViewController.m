@@ -46,6 +46,28 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
     return self;
 }
 
+# pragma mark - UI
+
+-(void) viewDidLoad
+{
+    [self updateUI];
+}
+
+-(void) updateUI
+{
+    BOOL isActive = (self.peripheralManager != nil);
+    
+    if (isActive) {
+        self.startWavingButton.hidden = YES;
+        self.stopWavingButton.hidden = NO;
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"berlinON.png"]];
+    } else {
+        self.startWavingButton.hidden = NO;
+        self.stopWavingButton.hidden = YES;
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"berlinOFF.png"]];
+    }
+}
+
 
 #pragma mark - Wave
 
@@ -54,8 +76,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
     [self startBeaconAdvertising];
     [self startListeningForBeacons];
 
-    self.startWavingButton.hidden = YES;
-    self.stopWavingButton.hidden = NO;
+    [self updateUI];
 }
 
 - (IBAction)stopWaving:(UIButton *)button
@@ -63,8 +84,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
     [self stopBeaconAdvertising];
     [self stopListeningForBeacons];
 
-    self.startWavingButton.hidden = NO;
-    self.stopWavingButton.hidden = YES;
+    [self updateUI];
 }
 
 - (void)startBeaconAdvertising
