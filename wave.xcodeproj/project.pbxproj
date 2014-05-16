@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D09B0B4DA410BE79885FEEF /* WVEMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */; };
 		3D09BAEBBBF5B469D8268C5A /* WVEMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */; };
+		44475A09D09656A80B8C2BDF /* APLCompositeBehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44475218B9F733787A42ADAC /* APLCompositeBehaviorViewController.m */; };
+		44475FF241716AB8350279E6 /* APLPendulumBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 44475AD2716B065FADFD84C4 /* APLPendulumBehavior.m */; };
 		7A78B2BAD3B74DBFBD65AF9F /* libPods-waveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F74449C348BC4E11B1A2968B /* libPods-waveTests.a */; };
 		FE6C5E5819261344007860D4 /* WVEMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6C5E5719261344007860D4 /* WVEMainViewController.xib */; };
 		FEE321CD1926108300A66F92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CC1926108300A66F92 /* Foundation.framework */; };
@@ -36,6 +38,10 @@
 		3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEMainViewControllerTests.m; sourceTree = "<group>"; };
 		3D09B5777E6FB136619CC193 /* WVEMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVEMainViewController.h; sourceTree = "<group>"; };
 		3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEMainViewController.m; sourceTree = "<group>"; };
+		44475218B9F733787A42ADAC /* APLCompositeBehaviorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCompositeBehaviorViewController.m; sourceTree = "<group>"; };
+		444752AFE46A842B401B3E96 /* APLCompositeBehaviorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCompositeBehaviorViewController.h; sourceTree = "<group>"; };
+		44475AD2716B065FADFD84C4 /* APLPendulumBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLPendulumBehavior.m; sourceTree = "<group>"; };
+		44475DF13F09DFEA64D004F5 /* APLPendulumBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLPendulumBehavior.h; sourceTree = "<group>"; };
 		DF8A026449E049E8B3EDB215 /* Pods-waveTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waveTests.xcconfig"; path = "Pods/Pods-waveTests.xcconfig"; sourceTree = "<group>"; };
 		F74449C348BC4E11B1A2968B /* libPods-waveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-waveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6C5E5719261344007860D4 /* WVEMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WVEMainViewController.xib; sourceTree = "<group>"; };
@@ -93,8 +99,19 @@
 			children = (
 				3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */,
 				3D09B5777E6FB136619CC193 /* WVEMainViewController.h */,
+				444752AFE46A842B401B3E96 /* APLCompositeBehaviorViewController.h */,
+				44475218B9F733787A42ADAC /* APLCompositeBehaviorViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4447531890CC95DD5CEA2A53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44475DF13F09DFEA64D004F5 /* APLPendulumBehavior.h */,
+				44475AD2716B065FADFD84C4 /* APLPendulumBehavior.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FEE321C01926108200A66F92 = {
@@ -156,6 +173,7 @@
 				FEE321D91926108300A66F92 /* WVEAppDelegate.h */,
 				FEE321DA1926108300A66F92 /* WVEAppDelegate.m */,
 				3D09B8C2B27956495F5F91F6 /* View Controllers */,
+				4447531890CC95DD5CEA2A53 /* View */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -237,7 +255,7 @@
 				ORGANIZATIONNAME = wave;
 				TargetAttributes = {
 					FEE321E31926108300A66F92 = {
-						TestTargetID = FEE321C81926108300A66F92;
+						TestTargetID = FEE321C81926108300A66F92 /* wave */;
 					};
 				};
 			};
@@ -319,6 +337,8 @@
 				FEE321D61926108300A66F92 /* main.m in Sources */,
 				FEE321DB1926108300A66F92 /* WVEAppDelegate.m in Sources */,
 				3D09B0B4DA410BE79885FEEF /* WVEMainViewController.m in Sources */,
+				44475A09D09656A80B8C2BDF /* APLCompositeBehaviorViewController.m in Sources */,
+				44475FF241716AB8350279E6 /* APLPendulumBehavior.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
