@@ -51,6 +51,7 @@
 @interface APLPendulumBehavior ()
 @property (nonatomic, strong) UIAttachmentBehavior *draggingBehavior;
 @property (nonatomic, strong) UIPushBehavior *pushBehavior;
+@property (nonatomic) CGPoint startPoint;
 @end
 
 
@@ -61,11 +62,12 @@
 //! @a item hanging from @a p at a fixed distance (derived from the current
 //! distance from @a item to @a p.).
 //
-- (instancetype)initWithWeight:(id<UIDynamicItem>)item suspendedFromPoint:(CGPoint)p
+- (instancetype)initWithWeight:(id<UIDynamicItem>)item atStartPoint:(CGPoint)startPoint suspendedFromPoint:(CGPoint)p
 {
     self = [super init];
     if (self)
     {
+        _startPoint = startPoint;
         // The high-level pendulum behavior is built from 2 primitive behaviors.
         UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[item]];
         UIAttachmentBehavior *attachmentBehavior = [[UIAttachmentBehavior alloc] initWithItem:item attachedToAnchor:p];
@@ -91,7 +93,7 @@
 
 
 //| ----------------------------------------------------------------------------
-- (void)beginDraggingWeightAtPoint:(CGPoint)p
+- (void)beginDraggingWeightToPointOffset:(CGPoint)p
 {
     self.draggingBehavior.anchorPoint = p;
     [self addChildBehavior:self.draggingBehavior];
@@ -99,9 +101,9 @@
 
 
 //| ----------------------------------------------------------------------------
-- (void)dragWeightToPoint:(CGPoint)p
+- (void)dragWeightToPointOffset:(CGPoint)p
 {
-    self.draggingBehavior.anchorPoint = p;
+    self.draggingBehavior.anchorPoint = CGPointMake(_startPoint.x + p.x, _startPoint.y + p.y);
 }
 
 

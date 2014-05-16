@@ -52,40 +52,53 @@
 
 
 @interface APLCompositeBehaviorViewController ()
-@property (nonatomic, strong) UIView *square;
 @property (nonatomic, strong) UIDynamicAnimator *animator;
-@property (nonatomic, weak) APLPendulumBehavior *pendulumBehavior;
+@property (nonatomic, strong) NSMutableArray *behaviors;
 @end
 
 #define accelerationThreshold  0.30 // or whatever is appropriate - play around with different values
+#define sphereDiameter 50
+#define sphereSpacing 15
 
 @implementation APLCompositeBehaviorViewController
 {
 }
-//| ----------------------------------------------------------------------------
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-
-    _square = [[UIView alloc] initWithFrame:CGRectMake(
-        CGRectGetWidth([[self view] bounds]) / 2.f,
-        200.f ,
-        50.f,
-        50.f)];
-    [_square setBackgroundColor:[UIColor blueColor]];
-    [self.view addSubview:_square];
-
-    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-
-    CGPoint pendulumAttachmentPoint = CGPointMake(CGRectGetMidX(_square.frame), 50.f);
-
-    // An example of a high-level behavior simulating a simple pendulum.
-    APLPendulumBehavior *pendulumBehavior = [[APLPendulumBehavior alloc] initWithWeight:_square suspendedFromPoint:pendulumAttachmentPoint];
-    [animator addBehavior:pendulumBehavior];
-    self.pendulumBehavior = pendulumBehavior;
     
-    self.animator = animator;
+    _behaviors = [NSMutableArray new];
+    
+    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    [self setupView];
+}
+
+- (void) setupView
+{
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    int rows = CGRectGetHeight(self.view.bounds) / (sphereDiameter + 2 * sphereSpacing);
+    int cols = CGRectGetWidth(self.view.bounds) / (sphereDiameter + 2 * sphereSpacing);
+    for(int i=0; i<8; i++) {
+        for(int j=0; j<4; j++) {
+            UIView *tmpView = [[UIView alloc] initWithFrame:
+                               CGRectMake(sphereSpacing + j*(sphereDiameter+sphereSpacing) + 20,
+                                          sphereSpacing + i*(sphereDiameter+sphereSpacing) + 15,
+                                          sphereDiameter,
+                                          sphereDiameter)];
+            [tmpView setBackgroundColor:[UIColor blueColor]];
+            tmpView.layer.cornerRadius = sphereDiameter / 2;
+            [self.view addSubview:tmpView];
+
+            CGPoint pendulumAttachmentPoint = tmpView.center;
+            pendulumAttachmentPoint.y = CGRectGetMinY(tmpView.frame) - sphereSpacing;
+            
+            APLPendulumBehavior *pendulumBehavior = [[APLPendulumBehavior alloc] initWithWeight:tmpView atStartPoint:tmpView.center suspendedFromPoint:pendulumAttachmentPoint];
+            [self.animator addBehavior:pendulumBehavior];
+            [self.behaviors addObject: pendulumBehavior];
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -100,16 +113,19 @@
     //logic here.
     if (motion == UIEventSubtypeMotionShake)
     {
-        [self.pendulumBehavior dragWeightToPoint:CGPointMake(CGRectGetMaxX(_square.frame) + 50.f, CGRectGetMinY(_square.frame))];
+        [self.behaviors enumerateObjectsUsingBlock:^(APLPendulumBehavior *obj, NSUInteger idx, BOOL *stop) {
+            [obj dragWeightToPointOffset:CGPointMake(randomInt( - 30, 30), 0.f)];
+        }];
     }
-
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if (motion == UIEventSubtypeMotionShake)
     {
-        [self.pendulumBehavior endDraggingWeightWithVelocity:CGPointMake(200, 200)];
+        [_behaviors enumerateObjectsUsingBlock:^(APLPendulumBehavior *obj, NSUInteger idx, BOOL *stop) {
+            [obj endDraggingWeightWithVelocity:CGPointMake(200, 200)];
+        }];
     }
 }
 
@@ -124,21 +140,29 @@
 //
 - (IBAction)dragWeight:(UIPanGestureRecognizer*)gesture
 {
-    if (gesture.state == UIGestureRecognizerStateBegan)
-        [self.pendulumBehavior beginDraggingWeightAtPoint:[gesture locationInView:self.view]];
-    else if (gesture.state == UIGestureRecognizerStateEnded)
-        [self.pendulumBehavior endDraggingWeightWithVelocity:[gesture velocityInView:self.view]];
-    else if (gesture.state == UIGestureRecognizerStateCancelled)
-    {
-        gesture.enabled = YES;
-        [self.pendulumBehavior endDraggingWeightWithVelocity:[gesture velocityInView:self.view]];
-    }
-    else if (!CGRectContainsPoint(self.square.bounds, [gesture locationInView:self.square]))
-        // End the gesture if the user's finger moved outside square1's bounds.
-        // This causes the gesture to transition to the cencelled state.
-        gesture.enabled = NO;
-    else
-        [self.pendulumBehavior dragWeightToPoint:[gesture locationInView:self.view]];
+//    if (gesture.state == UIGestureRecognizerStateBegan)
+//        [self.pendulumBehavior beginDraggingWeightAtPoint:[gesture locationInView:self.view]];
+//    else if (gesture.state == UIGestureRecognizerStateEnded)
+//        [self.pendulumBehavior endDraggingWeightWithVelocity:[gesture velocityInView:self.view]];
+//    else if (gesture.state == UIGestureRecognizerStateCancelled)
+//    {
+//        gesture.enabled = YES;
+//        [self.pendulumBehavior endDraggingWeightWithVelocity:[gesture velocityInView:self.view]];
+//    }
+//    else if (!CGRectContainsPoint(self.square.bounds, [gesture locationInView:self.square]))
+//        // End the gesture if the user's finger moved outside square1's bounds.
+//        // This causes the gesture to transition to the cencelled state.
+//        gesture.enabled = NO;
+//    else
+//        [self.pendulumBehavior dragWeightToPoint:[gesture locationInView:self.view]];
+}
+
+#pragma mark - helper
+int randomInt(int low, int high)
+{
+    int result = (arc4random() % (high - low + 1)) + low;
+    NSLog(@"%i", result);
+    return result;
 }
 
 @end

@@ -50,10 +50,9 @@
 
 @interface APLPendulumBehavior : UIDynamicBehavior
 
-- (instancetype)initWithWeight:(id<UIDynamicItem>)item suspendedFromPoint:(CGPoint)p;
-
-- (void)beginDraggingWeightAtPoint:(CGPoint)p;
-- (void)dragWeightToPoint:(CGPoint)p;
+- (instancetype)initWithWeight:(id<UIDynamicItem>)item atStartPoint:(CGPoint)startPoint suspendedFromPoint:(CGPoint)p;
+- (void)beginDraggingWeightToPointOffset:(CGPoint)p;
+- (void)dragWeightToPointOffset:(CGPoint)p;
 - (void)endDraggingWeightWithVelocity:(CGPoint)v;
 
 @end
