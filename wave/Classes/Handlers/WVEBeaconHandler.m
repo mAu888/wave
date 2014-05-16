@@ -130,7 +130,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
             }
         }];
 
-        if ( !isKnownBeacon )
+        if ( !isKnownBeacon && beacon.proximity != CLProximityUnknown )
         {
             [beacon setLastBeaconUpdateDate:[NSDate date]];
             [newBeacons addObject:beacon];

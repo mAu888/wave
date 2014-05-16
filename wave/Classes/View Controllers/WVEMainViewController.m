@@ -119,6 +119,7 @@
 - (void)beaconHandler:(WVEBeaconHandler *)handler didRecognizeNewBeacons:(NSSet *)beacons
 {
     [self triggerLocalNotification];
+    [self updateUI];
 }
 
 
