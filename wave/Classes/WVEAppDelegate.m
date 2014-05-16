@@ -8,16 +8,18 @@
 
 #import "WVEAppDelegate.h"
 #import "WVEMainViewController.h"
-#import "APLCompositeBehaviorViewController.h"
 
 @implementation WVEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[WVEMainViewController alloc] init];
-//    self.window.rootViewController = [[APLCompositeBehaviorViewController alloc] init];
     [self.window makeKeyAndVisible];
+
+
     return YES;
 }
 

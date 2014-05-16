@@ -8,6 +8,7 @@
 
 #import "WVEMainViewController.h"
 #import "WVEBeaconHandler.h"
+#import "WVEAnimationViewController.h"
 
 @import CoreBluetooth;
 @import CoreLocation;
@@ -18,16 +19,21 @@
 
 @property(weak, nonatomic) IBOutlet UIButton *startWavingButton;
 @property(weak, nonatomic) IBOutlet UIButton *stopWavingButton;
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property(weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property(strong, nonatomic) WVEBeaconHandler *beaconHandler;
-@property (weak, nonatomic) IBOutlet UIView *peersNearbyView;
-@property (weak, nonatomic) IBOutlet UILabel *peersNearbyLabel;
+@property(weak, nonatomic) IBOutlet UIView *peersNearbyView;
+@property(weak, nonatomic) IBOutlet UILabel *peersNearbyLabel;
 
 @end
 
 
 ////////////////////////////////////////////////////////////////////////////////
 @implementation WVEMainViewController
+{
+    BOOL _shakeViewVisible;
+    NSArray *_colorsArray;
+    NSUInteger _nextColorIndex;
+}
 
 - (void)dealloc
 {
@@ -55,6 +61,9 @@
                selector:@selector(didReceiveLocalNotification:)
                    name:WVEDidReceiveLocalNotification
                  object:nil];
+
+        _colorsArray = @[[UIColor yellowColor], [UIColor redColor], [UIColor greenColor]];
+        _nextColorIndex = 0;
     }
 
     return self;
@@ -64,7 +73,9 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     [self updateUI];
+    [self becomeFirstResponder];
 }
 
 - (void)updateUI
@@ -93,11 +104,12 @@
     }
     else
     {
-        text = [NSString stringWithFormat:NSLocalizedString(@"%d people nearby", nil), self.beaconHandler.beaconsNearby.count];
+        text = [NSString stringWithFormat:NSLocalizedString(@"%d people nearby", nil),
+                                          self.beaconHandler.beaconsNearby.count];
     }
 
     self.peersNearbyLabel.text = text;
-    self.peersNearbyView.hidden = self.beaconHandler.beaconsNearby.count == 0;
+    self.peersNearbyView.hidden = self.beaconHandler.beaconsNearby.count == 0 || !isActive;
 }
 
 #pragma mark - Wave
@@ -128,9 +140,13 @@
 
 #pragma mark - WVEBeaconHandlerDelegate
 
-- (void)beaconHandler:(WVEBeaconHandler *)handler didRecognizeNewBeacons:(NSSet *)beacons
+- (void)beaconHandler:(WVEBeaconHandler *)handler didUpdateBeaconsWithNewBeacons:(NSSet *)newBeacons
 {
-    [self triggerLocalNotification];
+    if ( newBeacons.count > 0 )
+    {
+        [self triggerLocalNotification];
+    }
+
     [self updateUI];
 }
 
@@ -155,4 +171,32 @@
     [alertView show];
 }
 
+
+#pragma mark - Shake detector
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake && !_shakeViewVisible )
+    {
+        _shakeViewVisible = YES;
+        WVEAnimationViewController *vc = [[WVEAnimationViewController alloc] initWithColor:_colorsArray[_nextColorIndex]];
+        [vc setDelegate:self];
+        [self presentViewController:vc
+                           animated:YES
+                         completion:nil];
+        _nextColorIndex = _nextColorIndex + 1 >= [_colorsArray count] ? 0 : _nextColorIndex + 1;
+    }
+}
+
+- (void)viewIsDismissed
+{
+    _shakeViewVisible = NO;
+    [self becomeFirstResponder];
+}
+
+#pragma
 @end
