@@ -31,6 +31,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
 @implementation WVEMainViewController
 {
     CLBeaconRegion *_beaconRegion;
+    CLBeaconRegion *_beaconAdvertisingRegion;
 }
 
 - (id)init
@@ -68,7 +69,7 @@ NSString *const WVEBeaconIdentifierString = @"io.waveapp.ios.wave";
 
 - (void)startBeaconAdvertising
 {
-    NSMutableDictionary *peripheralData = [[self beaconRegion] peripheralDataWithMeasuredPower:nil];
+    NSMutableDictionary *peripheralData = [[self beaconAdvertisingRegion] peripheralDataWithMeasuredPower:nil];
     self.peripheralManager = [[CBPeripheralManager alloc]
         initWithDelegate:self queue:dispatch_get_main_queue()];
 
@@ -169,17 +170,29 @@ rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
 {
     if ( !_beaconRegion )
     {
+        NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:WVEBeaconUUIDString];
+        _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
+                                                           identifier:WVEBeaconIdentifierString];
+    }
+
+    return _beaconRegion;
+}
+
+- (CLBeaconRegion *)beaconAdvertisingRegion
+{
+    if ( !_beaconAdvertisingRegion )
+    {
         CLBeaconMajorValue majorBeaconValue = ( CLBeaconMajorValue ) (arc4random() % UINT16_MAX);
         CLBeaconMinorValue minorBeaconValue = ( CLBeaconMinorValue ) (arc4random() % UINT16_MAX);
 
         NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:WVEBeaconUUIDString];
-        _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
+        _beaconAdvertisingRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                 major:majorBeaconValue
                                                                 minor:minorBeaconValue
                                                            identifier:WVEBeaconIdentifierString];
     }
 
-    return _beaconRegion;
+    return _beaconAdvertisingRegion;
 }
 
 - (void)triggerLocalNotification
