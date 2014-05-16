@@ -36,7 +36,6 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="startWaving:" destination="-1" eventType="touchUpInside" id="twZ-jE-O1T"/>
                         <action selector="stopWaving:" destination="-1" eventType="touchUpInside" id="wom-WT-wa9"/>
                     </connections>
                 </button>

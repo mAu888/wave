@@ -21,4 +21,9 @@
     return YES;
 }
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:WVEDidReceiveLocalNotification object:nil];
+}
+
 @end
