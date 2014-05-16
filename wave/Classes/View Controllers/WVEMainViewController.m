@@ -160,13 +160,16 @@
 
 - (void)didReceiveLocalNotification:(NSNotification *)note
 {
-    UIAlertView *alertView = [[UIAlertView alloc]
-        initWithTitle:NSLocalizedString(@"Hey", nil)
-              message:NSLocalizedString(@"There's someone near you! Take your phone up in the air!", nil)
-             delegate:self
-    cancelButtonTitle:NSLocalizedString(@"Ok, thanks!", nil)
-    otherButtonTitles:nil];
-    [alertView show];
+    if ( ![self presentedViewController] )
+    {
+        UIAlertView *alertView = [[UIAlertView alloc]
+            initWithTitle:NSLocalizedString(@"Hey", nil)
+                  message:NSLocalizedString(@"There's someone near you! Take your phone up in the air!", nil)
+                 delegate:self
+        cancelButtonTitle:NSLocalizedString(@"Ok, thanks!", nil)
+        otherButtonTitles:nil];
+        [alertView show];
+    }
 }
 
 #pragma mark - UIAlertViewDelegate
