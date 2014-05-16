@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3D09B0B4DA410BE79885FEEF /* WVEMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */; };
+		3D09B61FE857AFE5DB1B8CB9 /* CLBeacon+WVEBeaconAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09BD471E702DD1180C02D1 /* CLBeacon+WVEBeaconAdditions.m */; };
+		3D09B8067D6EA19FABFC6994 /* constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B94E53AA01BCB44D40EB /* constants.m */; };
 		3D09BAEBBBF5B469D8268C5A /* WVEMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */; };
+		3D09BBEF86DEE2EC17F545D6 /* WVEBeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09B8CE299932317790FF18 /* WVEBeaconHandler.m */; };
 		44475A09D09656A80B8C2BDF /* APLCompositeBehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44475218B9F733787A42ADAC /* APLCompositeBehaviorViewController.m */; };
 		44475FF241716AB8350279E6 /* APLPendulumBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 44475AD2716B065FADFD84C4 /* APLPendulumBehavior.m */; };
 		5C5D9E94192634D6001BC35D /* WVEShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D9E93192634D6001BC35D /* WVEShapeView.m */; };
@@ -38,7 +41,13 @@
 /* Begin PBXFileReference section */
 		3D09B05E2A22EBA8DD11ACFD /* WVEMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEMainViewControllerTests.m; sourceTree = "<group>"; };
 		3D09B5777E6FB136619CC193 /* WVEMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVEMainViewController.h; sourceTree = "<group>"; };
+		3D09B8A0DB7AC64C308532C0 /* WVEBeaconHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVEBeaconHandler.h; sourceTree = "<group>"; };
+		3D09B8CE299932317790FF18 /* WVEBeaconHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEBeaconHandler.m; sourceTree = "<group>"; };
+		3D09B94E53AA01BCB44D40EB /* constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = constants.m; sourceTree = "<group>"; };
 		3D09B9C931B8FCE0DEFD25B0 /* WVEMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVEMainViewController.m; sourceTree = "<group>"; };
+		3D09B9D572A7E132CCB46711 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		3D09BD471E702DD1180C02D1 /* CLBeacon+WVEBeaconAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+WVEBeaconAdditions.m"; sourceTree = "<group>"; };
+		3D09BE55A7DA2B075190ACF3 /* CLBeacon+WVEBeaconAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+WVEBeaconAdditions.h"; sourceTree = "<group>"; };
 		44475218B9F733787A42ADAC /* APLCompositeBehaviorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCompositeBehaviorViewController.m; sourceTree = "<group>"; };
 		444752AFE46A842B401B3E96 /* APLCompositeBehaviorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCompositeBehaviorViewController.h; sourceTree = "<group>"; };
 		44475AD2716B065FADFD84C4 /* APLPendulumBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLPendulumBehavior.m; sourceTree = "<group>"; };
@@ -97,6 +106,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3D09B2713561FA0E42C10800 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				3D09B8A0DB7AC64C308532C0 /* WVEBeaconHandler.h */,
+				3D09B8CE299932317790FF18 /* WVEBeaconHandler.m */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		3D09B8C2B27956495F5F91F6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +126,15 @@
 				5C5D9E93192634D6001BC35D /* WVEShapeView.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3D09B8CE1B8799C697392919 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3D09BE55A7DA2B075190ACF3 /* CLBeacon+WVEBeaconAdditions.h */,
+				3D09BD471E702DD1180C02D1 /* CLBeacon+WVEBeaconAdditions.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		4447531890CC95DD5CEA2A53 /* View */ = {
@@ -168,6 +195,8 @@
 				FEE321D41926108300A66F92 /* wave-Info.plist */,
 				FEE321D51926108300A66F92 /* main.m */,
 				FEE321D71926108300A66F92 /* wave-Prefix.pch */,
+				3D09B9D572A7E132CCB46711 /* constants.h */,
+				3D09B94E53AA01BCB44D40EB /* constants.m */,
 			);
 			path = "Ancillary Files";
 			sourceTree = "<group>";
@@ -179,6 +208,8 @@
 				FEE321DA1926108300A66F92 /* WVEAppDelegate.m */,
 				3D09B8C2B27956495F5F91F6 /* View Controllers */,
 				4447531890CC95DD5CEA2A53 /* View */,
+				3D09B8CE1B8799C697392919 /* Categories */,
+				3D09B2713561FA0E42C10800 /* Handlers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -345,6 +376,9 @@
 				5C5D9E94192634D6001BC35D /* WVEShapeView.m in Sources */,
 				44475A09D09656A80B8C2BDF /* APLCompositeBehaviorViewController.m in Sources */,
 				44475FF241716AB8350279E6 /* APLPendulumBehavior.m in Sources */,
+				3D09B8067D6EA19FABFC6994 /* constants.m in Sources */,
+				3D09B61FE857AFE5DB1B8CB9 /* CLBeacon+WVEBeaconAdditions.m in Sources */,
+				3D09BBEF86DEE2EC17F545D6 /* WVEBeaconHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
