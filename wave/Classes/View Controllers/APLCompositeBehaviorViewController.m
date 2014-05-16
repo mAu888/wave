@@ -48,41 +48,75 @@
 
 #import "APLCompositeBehaviorViewController.h"
 #import "APLPendulumBehavior.H"
-#import "APLDecorationView.h"
+#import <CoreMotion/CoreMotion.h>
+
 
 @interface APLCompositeBehaviorViewController ()
-@property (nonatomic, weak) IBOutlet UIView *square;
-@property (nonatomic, weak) IBOutlet UIImageView *attachmentPoint;
+@property (nonatomic, strong) UIView *square;
 @property (nonatomic, strong) UIDynamicAnimator *animator;
 @property (nonatomic, weak) APLPendulumBehavior *pendulumBehavior;
 @end
 
+#define accelerationThreshold  0.30 // or whatever is appropriate - play around with different values
 
 @implementation APLCompositeBehaviorViewController
-
+{
+}
 //| ----------------------------------------------------------------------------
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.attachmentPoint.tintColor = [UIColor redColor];
-    self.attachmentPoint.image = [self.attachmentPoint.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
-    // Visually show the connection between the attachmentPoint and the square.
-    [(APLDecorationView*)self.view trackAndDrawAttachmentFromView:self.attachmentPoint toView:self.square withAttachmentOffset:CGPointMake(0, -0.95f * self.square.bounds.size.height/2)];
-    
+
+
+    _square = [[UIView alloc] initWithFrame:CGRectMake(
+        CGRectGetWidth([[self view] bounds]) / 2.f,
+        200.f ,
+        50.f,
+        50.f)];
+    [_square setBackgroundColor:[UIColor blueColor]];
+    [self.view addSubview:_square];
+
     UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 
-    CGPoint pendulumAttachmentPoint = self.attachmentPoint.center;
+    CGPoint pendulumAttachmentPoint = CGPointMake(CGRectGetMidX(_square.frame), 50.f);
 
     // An example of a high-level behavior simulating a simple pendulum.
-    APLPendulumBehavior *pendulumBehavior = [[APLPendulumBehavior alloc] initWithWeight:self.square suspendedFromPoint:pendulumAttachmentPoint];
+    APLPendulumBehavior *pendulumBehavior = [[APLPendulumBehavior alloc] initWithWeight:_square suspendedFromPoint:pendulumAttachmentPoint];
     [animator addBehavior:pendulumBehavior];
     self.pendulumBehavior = pendulumBehavior;
     
     self.animator = animator;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    //Motion detected, handle it with method calls or additional
+    //logic here.
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self.pendulumBehavior dragWeightToPoint:CGPointMake(CGRectGetMaxX(_square.frame) + 50.f, CGRectGetMinY(_square.frame))];
+    }
+
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self.pendulumBehavior endDraggingWeightWithVelocity:CGPointMake(200, 200)];
+    }
+}
+
+-(BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
 
 //| ----------------------------------------------------------------------------
 //  IBAction for the Pan Gesture Recognizer that has been configured to track
