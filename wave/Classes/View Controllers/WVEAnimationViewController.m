@@ -85,7 +85,7 @@
     int columns = CGRectGetHeight([self.view bounds]) / (squareWidth + spacing);
     for(int i = 0; i < rows; i++)
     {
-        for(int j = 0; j < columns; j++)
+        for(int j = 0; j <= columns; j++)
         {
             UIView *tmpView = [[UIView alloc] initWithFrame:
                                                   CGRectMake(spacing + j*(squareWidth+ spacing),
