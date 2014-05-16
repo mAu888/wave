@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEE321CD1926108300A66F92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CC1926108300A66F92 /* Foundation.framework */; };
+		FEE321CF1926108300A66F92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CE1926108300A66F92 /* CoreGraphics.framework */; };
+		FEE321D11926108300A66F92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321D01926108300A66F92 /* UIKit.framework */; };
+		FEE321D61926108300A66F92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE321D51926108300A66F92 /* main.m */; };
+		FEE321DB1926108300A66F92 /* WVEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE321DA1926108300A66F92 /* WVEAppDelegate.m */; };
+		FEE321DF1926108300A66F92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE321DE1926108300A66F92 /* Images.xcassets */; };
+		FEE321E61926108300A66F92 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321E51926108300A66F92 /* XCTest.framework */; };
+		FEE321E71926108300A66F92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321CC1926108300A66F92 /* Foundation.framework */; };
+		FEE321E81926108300A66F92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE321D01926108300A66F92 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FEE321E91926108300A66F92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEE321C11926108200A66F92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEE321C81926108300A66F92;
+			remoteInfo = wave;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FEE321C91926108300A66F92 /* wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE321CC1926108300A66F92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FEE321CE1926108300A66F92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FEE321D01926108300A66F92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FEE321D41926108300A66F92 /* wave-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "wave-Info.plist"; path = "Ancillary Files/wave-Info.plist"; sourceTree = "<group>"; };
+		FEE321D51926108300A66F92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Ancillary Files/main.m"; sourceTree = "<group>"; };
+		FEE321D71926108300A66F92 /* wave-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "wave-Prefix.pch"; path = "Ancillary Files/wave-Prefix.pch"; sourceTree = "<group>"; };
+		FEE321D91926108300A66F92 /* WVEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WVEAppDelegate.h; path = Classes/WVEAppDelegate.h; sourceTree = "<group>"; };
+		FEE321DA1926108300A66F92 /* WVEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WVEAppDelegate.m; path = Classes/WVEAppDelegate.m; sourceTree = "<group>"; };
+		FEE321DC1926108300A66F92 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		FEE321DE1926108300A66F92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
+		FEE321E41926108300A66F92 /* waveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE321E51926108300A66F92 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FEE321ED1926108300A66F92 /* waveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "waveTests-Info.plist"; path = "Ancillary Files/waveTests-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEE321C61926108300A66F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE321CF1926108300A66F92 /* CoreGraphics.framework in Frameworks */,
+				FEE321D11926108300A66F92 /* UIKit.framework in Frameworks */,
+				FEE321CD1926108300A66F92 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE321E11926108300A66F92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE321E61926108300A66F92 /* XCTest.framework in Frameworks */,
+				FEE321E81926108300A66F92 /* UIKit.framework in Frameworks */,
+				FEE321E71926108300A66F92 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEE321C01926108200A66F92 = {
+			isa = PBXGroup;
+			children = (
+				FEE321D21926108300A66F92 /* wave */,
+				FEE321EB1926108300A66F92 /* waveTests */,
+				FEE321CB1926108300A66F92 /* Frameworks */,
+				FEE321CA1926108300A66F92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEE321CA1926108300A66F92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321C91926108300A66F92 /* wave.app */,
+				FEE321E41926108300A66F92 /* waveTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEE321CB1926108300A66F92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321CC1926108300A66F92 /* Foundation.framework */,
+				FEE321CE1926108300A66F92 /* CoreGraphics.framework */,
+				FEE321D01926108300A66F92 /* UIKit.framework */,
+				FEE321E51926108300A66F92 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEE321D21926108300A66F92 /* wave */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321DC1926108300A66F92 /* Podfile */,
+				FEE321D31926108300A66F92 /* Ancillary Files */,
+				FEE321D81926108300A66F92 /* Classes */,
+				FEE321DD1926108300A66F92 /* Resources */,
+			);
+			path = wave;
+			sourceTree = "<group>";
+		};
+		FEE321D31926108300A66F92 /* Ancillary Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321D41926108300A66F92 /* wave-Info.plist */,
+				FEE321D51926108300A66F92 /* main.m */,
+				FEE321D71926108300A66F92 /* wave-Prefix.pch */,
+			);
+			name = "Ancillary Files";
+			sourceTree = "<group>";
+		};
+		FEE321D81926108300A66F92 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321D91926108300A66F92 /* WVEAppDelegate.h */,
+				FEE321DA1926108300A66F92 /* WVEAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		FEE321DD1926108300A66F92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321DE1926108300A66F92 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FEE321EB1926108300A66F92 /* waveTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321EC1926108300A66F92 /* Ancillary Files */,
+			);
+			path = waveTests;
+			sourceTree = "<group>";
+		};
+		FEE321EC1926108300A66F92 /* Ancillary Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEE321ED1926108300A66F92 /* waveTests-Info.plist */,
+			);
+			name = "Ancillary Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEE321C81926108300A66F92 /* wave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEE321F11926108300A66F92 /* Build configuration list for PBXNativeTarget "wave" */;
+			buildPhases = (
+				FEE321C51926108300A66F92 /* Sources */,
+				FEE321C61926108300A66F92 /* Frameworks */,
+				FEE321C71926108300A66F92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wave;
+			productName = wave;
+			productReference = FEE321C91926108300A66F92 /* wave.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FEE321E31926108300A66F92 /* waveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEE321F51926108300A66F92 /* Build configuration list for PBXNativeTarget "waveTests" */;
+			buildPhases = (
+				FEE321E01926108300A66F92 /* Sources */,
+				FEE321E11926108300A66F92 /* Frameworks */,
+				FEE321E21926108300A66F92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEE321EA1926108300A66F92 /* PBXTargetDependency */,
+			);
+			name = waveTests;
+			productName = waveTests;
+			productReference = FEE321E41926108300A66F92 /* waveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEE321C11926108200A66F92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WVE;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = wave;
+				TargetAttributes = {
+					FEE321E31926108300A66F92 = {
+						TestTargetID = FEE321C81926108300A66F92;
+					};
+				};
+			};
+			buildConfigurationList = FEE321C41926108200A66F92 /* Build configuration list for PBXProject "wave" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FEE321C01926108200A66F92;
+			productRefGroup = FEE321CA1926108300A66F92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEE321C81926108300A66F92 /* wave */,
+				FEE321E31926108300A66F92 /* waveTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEE321C71926108300A66F92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE321DF1926108300A66F92 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE321E21926108300A66F92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEE321C51926108300A66F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE321D61926108300A66F92 /* main.m in Sources */,
+				FEE321DB1926108300A66F92 /* WVEAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE321E01926108300A66F92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FEE321EA1926108300A66F92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEE321C81926108300A66F92 /* wave */;
+			targetProxy = FEE321E91926108300A66F92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FEE321EE1926108300A66F92 /* Release Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Enterprise";
+		};
+		FEE321EF1926108300A66F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FEE321F01926108300A66F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEE321F21926108300A66F92 /* Release Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				INFOPLIST_FILE = "wave/Ancillary Files/wave-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Release Enterprise";
+		};
+		FEE321F31926108300A66F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				INFOPLIST_FILE = "wave/Ancillary Files/wave-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FEE321F41926108300A66F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				INFOPLIST_FILE = "wave/Ancillary Files/wave-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FEE321F61926108300A66F92 /* Release Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wave.app/wave";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "waveTests/Ancillary Files/waveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Release Enterprise";
+		};
+		FEE321F71926108300A66F92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wave.app/wave";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "waveTests/Ancillary Files/waveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FEE321F81926108300A66F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wave.app/wave";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wave/Ancillary Files/wave-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "waveTests/Ancillary Files/waveTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEE321C41926108200A66F92 /* Build configuration list for PBXProject "wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE321EE1926108300A66F92 /* Release Enterprise */,
+				FEE321EF1926108300A66F92 /* Debug */,
+				FEE321F01926108300A66F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEE321F11926108300A66F92 /* Build configuration list for PBXNativeTarget "wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE321F21926108300A66F92 /* Release Enterprise */,
+				FEE321F31926108300A66F92 /* Debug */,
+				FEE321F41926108300A66F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FEE321F51926108300A66F92 /* Build configuration list for PBXNativeTarget "waveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE321F61926108300A66F92 /* Release Enterprise */,
+				FEE321F71926108300A66F92 /* Debug */,
+				FEE321F81926108300A66F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEE321C11926108200A66F92 /* Project object */;
+}
