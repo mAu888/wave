@@ -14,7 +14,7 @@
 @protocol WVEBeaconHandlerDelegate <NSObject>
 
 @optional
-- (void)beaconHandler:(WVEBeaconHandler *)handler didRecognizeNewBeacons:(NSSet *)beacons;
+- (void)beaconHandler:(WVEBeaconHandler *)handler didUpdateBeaconsWithNewBeacons:(NSSet *)beacons;
 - (void)beaconHandler:(WVEBeaconHandler *)handler didFailWithError:(NSError *)error;
 
 @end
